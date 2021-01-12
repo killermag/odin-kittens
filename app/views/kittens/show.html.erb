@@ -1,0 +1,22 @@
+<h1> Showing a kitty </h1>
+
+<br>
+<% if notice %>
+    <%= notice %>
+<% end %>
+
+Name: <%= @kitten.name %>
+<br>
+
+Age: <%= @kitten.age %>
+<br>
+
+Cuteness: <%= @kitten.cuteness%>
+<br>
+
+Softness: <%= @kitten.softness %>
+<br>
+
+<%= link_to "edit", edit_kitten_path(@kitten) %>
+<br>
+<%= link_to "delete", kitten_path(@kitten),  method: :delete %>

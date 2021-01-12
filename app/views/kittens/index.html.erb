@@ -1,0 +1,19 @@
+<% if notice %>
+  <%= notice %>
+<% end %>
+ 
+<br>
+
+<h1>Kittens</h1>
+
+<%= link_to 'New kitty' , new_kitten_path %>
+<br>
+
+<% @kittens.each do |k| %> 
+  <%= k.name %> 
+  <%= link_to 'show', kitten_path(k)  %> 
+  <%= link_to "delete", kitten_path(k),  method: :delete %>
+  <br>
+  
+<% end %> 
+
